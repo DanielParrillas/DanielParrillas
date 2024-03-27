@@ -1,0 +1,36 @@
+---
+type Props = {
+  description: string;
+  highlights: string[];
+  isActive: boolean;
+  name: string;
+  url: string;
+  image: string;
+};
+
+const { description, highlights, isActive, name, url, image } = Astro.props;
+---
+
+<article class="p-4 md:p-6 bg-gray-100 rounded-lg flex flex-col">
+  <h3 class="font-bold text-lg">{name}</h3>
+  <p class="text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">
+    {description}
+  </p>
+  <ul class="flex gap-2">
+    <h4 class="font-semibold text-sm text-gray-600 dark:text-gray-400">
+      Etiquetas:
+    </h4>
+    {
+      highlights.map((highlight) => (
+        <li class="text-xs rounded-full px-2 py-1 bg-gray-200">{highlight}</li>
+      ))
+    }
+  </ul>
+  <!-- <div class="grow"></div> -->
+  <img
+    loading="lazy"
+    src={image}
+    alt=`Captura de pantalla del proyecto ${name}`
+    class="rounded mt-2"
+  />
+</article>

@@ -33,7 +33,7 @@
       "url": "https://www.ambiente.gob.sv/",
       "startDate": "2022-01-01",
       "endDate": null,
-      "summary": "Como Desarrollador de aplicaciones web en la Dirección de Ecosistemas y Biodiversidad, contribuí a la optimización de procesos internos y mejoré la eficiencia en la respuesta a requerimientos a través de la implementación de formularios, dashboards y mapas interactivos. Desarrollé la API para el sistema de reservas de las Áreas Naturales Protegidas. Actualmente, estoy desarrollando un portal dedicado a la gestión de la biodiversidad y la conservación de territorios.",
+      "summary": "Como Desarrollador de aplicaciones web en la Dirección de Ecosistemas y Biodiversidad en el Ministerio de Medio Ambiente de El Salvador, contribuí a la optimización de procesos internos y mejoré la eficiencia en la respuesta a requerimientos a través de la implementación de formularios, dashboards y mapas interactivos. Desarrollé la API para el sistema de reservas de las Áreas Naturales Protegidas. Actualmente, estoy desarrollando un portal dedicado a la gestión de la biodiversidad y la conservación de territorios.",
       "highlights": ["Started the company"]
     }
   ],
@@ -181,39 +181,6 @@
     {
       "name": "Jane Doe",
       "reference": "Reference…"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Espacios recreativos",
-      "isActive": true,
-      "description": "Mapa interactivo de canchas, plazas recreativas y parques acuáticos.",
-      "highlights": [
-        "Proyecto de Universidad",
-        "Sistemas de Gestión Geográfico"
-      ],
-      "url": "https://danielparrillas.github.io/sgg-espacios-recreativos/"
-    },
-    {
-      "name": "RAEE Calculator",
-      "isActive": true,
-      "description": "Calculadora de totales por categorías de datos de residuos de aparatos eléctricos y electrónicos RAEE",
-      "highlights": [],
-      "url": "https://danielparrillas.github.io/raee-calculator/"
-    },
-    {
-      "name": "People list - Drag and Drop",
-      "isActive": true,
-      "description": "Lista interactiva que utiliza la tecnología drag and drop",
-      "highlights": ["Drag and Drop"],
-      "url": "https://danielparrillas.github.io/react-drag-and-drop/"
-    },
-    {
-      "name": "PortalDEB - Módulo de Reservaciones",
-      "isActive": false,
-      "description": "Módulo encargado de gestionar áreas naturales protegidas con fines turísticos, servicios que ofrecen y disponibilidad. Ademas, gestiona los parámetros utilizado por la API REST que consume el Booking de las Áreas Naturales Protegidas",
-      "highlights": ["Sistema", "API Rest"],
-      "url": "https://portaldeb.ambiente.gob.sv/portal/vista/index.php"
     }
   ],
   "extras": {

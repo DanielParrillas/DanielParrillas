@@ -1,0 +1,78 @@
+---
+import Badge from "@/components/Badge.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import GitHubIcon from "@/components/icons/GitHubIcon.astro";
+import LinkedInIcon from "@/components/icons/LinkedInIcon.astro";
+import MailForwadIcon from "@/components/icons/MailForwadIcon.astro";
+
+const basics = {
+  shortName: "Daniel Parrillas",
+  description: "Full Stack Developer con más de 2 años de experiencia",
+  state: "Disponible para trabajar",
+  label: "Full Stack Developer con más de 2 años de experiencia",
+  image: "/me.webp",
+  email: "daniel16parrillas@gmail.com",
+  phone: "+503 78308380",
+  url: "https://daniel.parrillas",
+  summary:
+    "+2 años de experiencia como Desarrollador Web. Actualmente soy Programador en el Ministerio de Medio Ambiente. Vivo en San Salvador, El Salvador. He trabajado en diferentes proyectos: desde apps web hasta complejos sistemas informáticos.",
+  location: {
+    address: "",
+    postalCode: "08820",
+    city: "Santo Tomas",
+    countryCode: "ES",
+    region: "El Salvador",
+  },
+  profiles: {
+    linkedIn: {
+      network: "LinkedIn",
+      username: "danielparrillas",
+      url: "https://linkedin.com/in/danielparrillas",
+    },
+    gitHub: {
+      network: "GitHub",
+      username: "danielparrillas",
+      url: "https://github.com/danielparrillas",
+    },
+  },
+};
+
+const { shortName, state, description, email, profiles } = basics;
+const { gitHub, linkedIn } = profiles;
+---
+
+<SectionContainer class="mt-16 mb-44 pt-28">
+  <span>
+    <img
+      class="rounded-full size-24 mb-4"
+      src="/daniel-photo.jpg"
+      alt="foto de Daniel"
+    />
+  </span>
+  <h1
+    class="dark:text-white text-4xl font-bold flex flex-col lg:flex-row gap-4 pb-4"
+  >
+    Hey, soy {shortName}
+    <a
+      href={linkedIn.url}
+      class="flex items-center text-nowrap"
+      target="_blank"
+      rel="noopener"
+    >
+      <Badge>{state}</Badge>
+    </a>
+  </h1>
+  <h2 class="text-xl opacity-60 text-wrap">{description}</h2>
+  <nav class="flex gap-4 flex-wrap mt-4">
+    <SocialPill href={linkedIn.url}>
+      <LinkedInIcon class="size-6" />LinkedIn
+    </SocialPill>
+    <SocialPill href={gitHub.url}>
+      <GitHubIcon class="size-6" />GitHub
+    </SocialPill>
+    <SocialPill href={`mailto:${email}`}>
+      <MailForwadIcon class="size-6" />{email}
+    </SocialPill>
+  </nav>
+</SectionContainer>

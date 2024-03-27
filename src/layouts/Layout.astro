@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/onest";
 import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
 
 interface Props {
   title: string;
@@ -21,16 +22,9 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <div
-      class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
-    >
-      <div
-        class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#cffafe,transparent)]"
-      >
-        <Header />
-        <slot />
-      </div>
-    </div>
+    <Header />
+    <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -39,17 +33,25 @@ const { title, description } = Astro.props;
   }
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
 
-  /* body {
-    background-color: #111827;
-  } */
+  body {
+    /* background-color: #111827; */
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    body {
+      scroll-behavior: auto;
+    }
+  }
 
   body > div > div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     min-height: 100dvh;
+    overflow-x: hidden;
   }
 </style>

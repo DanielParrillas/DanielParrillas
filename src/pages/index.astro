@@ -1,56 +1,17 @@
 ---
-import Badge from "@/components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
-import LinkedInIcon from "@/components/icons/LinkedIn.astro";
-import GitHubIcon from "@/components/icons/GitHub.astro";
-import MailForwadIcon from "@/components/icons/MailForwad.astro";
-
-import { basics, extras } from "@cv";
-import SocialPill from "@/components/SocialPill.astro";
-
-const { description, shortName, state } = extras;
-const { profiles, email } = basics;
-const [linkedIn, gitHub] = profiles;
+import ProjectSection from "@/partials/ProjectSection.astro";
+import ExperienceSection from "@/partials/ExperienceSection.astro";
+import MainSection from "@/partials/MainSection.astro";
 ---
 
 <Layout
-  title={`Portfolio de ${shortName}`}
+  title="Portfolio de Daniel Parrillas"
   description="Contrata a Daniel Parrillas para crear tu aplicación web. Desarrollador Web Full-Stack."
 >
-  <main>
-    <section class="max-w-6xl w-full mx-auto py-44">
-      <span>
-        <img
-          class="rounded-full size-24 mb-4"
-          src="/daniel-photo.jpg"
-          alt="foto de Daniel"
-        />
-      </span>
-      <h1
-        class="dark:text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-4"
-      >
-        Hey, soy {shortName}
-        <a
-          href={linkedIn.url}
-          class="flex items-center"
-          target="_blank"
-          rel="noopener"
-        >
-          <Badge>{state}</Badge>
-        </a>
-      </h1>
-      <h2 class="text-2xl opacity-60 text-wrap">{description}</h2>
-      <nav class="flex gap-2 flex-wrap mt-4">
-        <SocialPill href={linkedIn.url}>
-          <LinkedInIcon class="size-6" />LinkedIn
-        </SocialPill>
-        <SocialPill href={gitHub.url}>
-          <GitHubIcon class="size-6" />GitHub
-        </SocialPill>
-        <SocialPill href={gitHub.url}>
-          <MailForwadIcon class="size-6" />{email}
-        </SocialPill>
-      </nav>
-    </section>
+  <main class="flex flex-col justify-center items-center px-4 sm:px-12">
+    <MainSection id="top" />
+    <ExperienceSection id="experience" />
+    <ProjectSection id="projects" />
   </main>
 </Layout>

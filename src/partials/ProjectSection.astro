@@ -1,0 +1,52 @@
+---
+import ProjectArticle from "@/components/ProjectArticle.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import CodeIcon from "@/components/icons/CodeIcon.astro";
+
+const projects = [
+  {
+    name: "Espacios recreativos",
+    isActive: true,
+    description:
+      "Mapa interactivo de canchas, plazas recreativas y parques acuáticos.",
+    highlights: ["Proyecto de Universidad", "Sistemas de Gestión Geográfico"],
+    url: "https://danielparrillas.github.io/sgg-espacios-recreativos/",
+    image: "/screenshots/sgg-espacios-recreativos-osm.webp",
+  },
+  {
+    name: "RAEE Calculator",
+    isActive: true,
+    description:
+      "Calculadora de totales por categorías de datos de residuos de aparatos eléctricos y electrónicos RAEE",
+    highlights: ["Calculadora"],
+    url: "https://danielparrillas.github.io/raee-calculator/",
+    image: "/screenshots/raee-calculator.webp",
+  },
+  {
+    name: "People list - Drag and Drop",
+    isActive: true,
+    description: "Lista interactiva que utiliza la tecnología drag and drop",
+    highlights: ["Drag and Drop"],
+    url: "https://danielparrillas.github.io/react-drag-and-drop/",
+    image: "/screenshots/react-drag-and-drop.webp",
+  },
+  {
+    name: "PortalDEB - Módulo de Reservaciones",
+    isActive: false,
+    description:
+      "Módulo encargado de gestionar áreas naturales protegidas con fines turísticos, servicios que ofrecen y disponibilidad. Ademas, gestiona los parámetros utilizado por la API REST que consume el Booking de las Áreas Naturales Protegidas",
+    highlights: ["Sistema", "API Rest"],
+    url: "https://portaldeb.ambiente.gob.sv/portal/vista/index.php",
+    image: "/screenshots/portaldeb-reservaciones-lugares.webp",
+  },
+];
+---
+
+<SectionContainer {...Astro.props}>
+  <h2 class="text-2xl font-semibold mb-4 flex gap-x-2 items-center">
+    <CodeIcon class="size-8" />Proyectos
+  </h2>
+  <div class="grid gap-4 md:gap-6 md:grid-cols-2">
+    {projects.map((project) => <ProjectArticle {...project} />)}
+  </div>
+</SectionContainer>

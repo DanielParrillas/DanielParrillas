@@ -1,10 +1,43 @@
-<header class="flex max-w-6xl w-full justify-center rounded-lg py-5">
+---
+const navLinks = [
+  {
+    url: "#top",
+    label: "Inicio",
+  },
+  {
+    url: "#experience",
+    label: "Experiencia",
+  },
+  {
+    url: "#projects",
+    label: "Proyectos",
+  },
+  {
+    url: "#contacts",
+    label: "Contactos",
+  },
+];
+---
+
+<header
+  class="sticky bg-white/50 top-0 z-10 flex w-full justify-center py-5 backdrop-blur border"
+>
   <nav
-    class="flex justify-around flex-row gap-x-16 text-black/60 text-lg font-medium pt-2"
+    class="max-w-6xl px-4 sm:px-12 w-full overflow-x-hidden flex justify-center flex-row gap-x-2 sm:gap-x-8 md:gap-x-16 pt-2"
   >
-    <a href="/">Home</a>
-    <a href="/about">Acerca de mi</a>
-    <a href="/projects">Proyectos</a>
-    <a href="/contact">Contactos</a>
+    {
+      navLinks.map((link) => (
+        <a
+          href={link.url}
+          class="
+          text-black/80 font-medium
+          hover:text-cyan-500
+          transition-colors duration-200 ease-in-out
+          "
+        >
+          {link.label}
+        </a>
+      ))
+    }
   </nav>
 </header>
